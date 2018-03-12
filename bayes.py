@@ -73,6 +73,8 @@ def computePredictions_NaiveBayes(X_test, P_Y, P_XgY, metadata, metarange):
         Y_hits.append(np.argmax(prediction_distribution))
         Y_p.append(prediction_distribution[predictedClass])
     y_range = metadata[metadata.names()[-1]][1]
+    print y_range
+    print metarange
     hit = 0
     for m in range(len(metarange)):
         prediction = y_range[Y_hits[m]]
